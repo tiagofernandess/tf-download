@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TF Sistemas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">
+                <img src="assets/tf-logo-branca-vertical.png" alt="TF Sistemas" class="logo-img">
+            </h1>
+            <div class="nav-links">
+                <button class="nav-btn active" onclick="showSection('downloads')">Downloads</button>
+                <button class="nav-btn" onclick="showSection('tutoriais')">Tutoriais</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção de Downloads -->
+    <section id="downloads" class="section active">
+        <div class="container">
+            <h2><i class="fas fa-download"></i> Downloads</h2>
+            <div class="file-list">
+                <div class="file-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span class="file-name">SA Esportes 4.8</span>
+                    <a href="arquivos/sa_esportes_4.8.2.0.apk" download class="download-btn">
+                        <i class="fas fa-download"></i> Baixar
+                    </a>
+                </div>
+
+                <div class="file-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span class="file-name">LE 8.06.09</span>
+                    <a href="arquivos/app_lew-8.06.009.apk" download class="download-btn">
+                        <i class="fas fa-download"></i> Baixar
+                    </a>
+                </div>
+
+                <div class="file-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span class="file-name">Retaguarda 15.0</span>
+                    <a href="arquivos/mobile_15.0.005.apk" download class="download-btn">
+                        <i class="fas fa-download"></i> Baixar
+                    </a>
+                </div>
+
+                <div class="file-item">
+                    <i class="fas fa-file-archive"></i>
+                    <span class="file-name">Tamper VX</span>
+                    <a href="arquivos/verifone.zip" download class="download-btn">
+                        <i class="fas fa-download"></i> Baixar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Tutoriais -->
+    <section id="tutoriais" class="section">
+        <div class="container">
+            <h2><i class="fas fa-graduation-cap"></i> Tutoriais</h2>
+            <div class="tutorial-list">
+                <div class="tutorial-item">
+                    <i class="fas fa-video"></i>
+                    <span class="tutorial-name">Instalação do App</span>
+                    <a href="tutoriais/instalacao.mp4" class="tutorial-btn">
+                        <i class="fas fa-play"></i> Assistir
+                    </a>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section, .nav-btn').forEach(element => {
+                element.classList.remove('active');
+            });
+            
+            document.getElementById(sectionId).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('downloads');
+        });
+    </script>
+</body>
+</html>
