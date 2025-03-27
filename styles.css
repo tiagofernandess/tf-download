@@ -65,6 +65,7 @@ body {
     border-radius: 25px;
     transition: all 0.3s ease;
     font-size: 1rem;
+    text-decoration: none; /* Linha adicionada para remover sublinhado */
 }
 
 .nav-btn.active, .nav-btn:hover {
